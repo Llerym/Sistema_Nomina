@@ -1,0 +1,54 @@
+<odoo>
+  <record id="view_employee_settlement_form" model="ir.ui.view">
+    <field name="name">hr.employee.settlement.form</field>
+    <field name="model">hr.employee.settlement</field>
+    <field name="arch" type="xml">
+      <form string="Liquidación Empleado">
+        <group>
+          <field name="employee_id" string="Empleado"/>
+          <field name="exit_date" string="Fecha de salida"/>
+          <field name="reason" string="Motivo"/>
+          <field name="notes" string="Notas"/>
+        </group>
+        <group string="Liquidación">
+          <field name="pending_vacation_days" string="Días pendientes de vacaciones"/>
+          <field name="severance_pay" string="Pago de indemnización"/>
+          <field name="final_payment" string="Pago final"/>
+          <field name="currency_id" string="Moneda"/>
+        </group>
+        <field name="state" readonly="1" string="Estado"/>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_employee_settlement_tree" model="ir.ui.view">
+    <field name="name">hr.employee.settlement.tree</field>
+    <field name="model">hr.employee.settlement</field>
+    <field name="type">list</field>
+    <field name="arch" type="xml">
+      <list string="Liquidaciones Empleados">
+        <field name="employee_id" string="Empleado"/>
+        <field name="exit_date" string="Fecha de salida"/>
+        <field name="reason" string="Motivo"/>
+        <field name="final_payment" string="Pago final"/>
+        <field name="state" string="Estado"/>
+      </list>
+    </field>
+  </record>
+
+  <record id="action_employee_settlement" model="ir.actions.act_window">
+    <field name="name">Liquidaciones Empleados</field>
+    <field name="res_model">hr.employee.settlement</field>
+    <field name="view_mode">list,form</field>
+  </record>
+
+  <menuitem id="menu_employee_settlement_root" name="Liquidaciones"
+            parent="om_hr_payroll.menu_hr_payroll_root" sequence="25"/>
+  <menuitem id="menu_employee_settlement" name="Liquidaciones Empleados"
+            parent="menu_employee_settlement_root" action="action_employee_settlement" sequence="1"/>
+</odoo>
+
+
+
+
+
