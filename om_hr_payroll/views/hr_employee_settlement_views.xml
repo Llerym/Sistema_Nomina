@@ -10,13 +10,29 @@
           <field name="reason" string="Motivo"/>
           <field name="notes" string="Notas"/>
         </group>
+
         <group string="Liquidación">
           <field name="pending_vacation_days" string="Días pendientes de vacaciones"/>
           <field name="severance_pay" string="Pago de indemnización"/>
-          <field name="final_payment" string="Pago final"/>
+          <field name="unpaid_salary" string="Salario pendiente"/>
+          <field name="bonuses" string="Bonificaciones"/>
+          <field name="deductions" string="Deducciones"/>
+          <field name="other_compensations" string="Otras compensaciones"/>
+          <field name="total_settlement" string="Total de liquidación" readonly="1"/>
           <field name="currency_id" string="Moneda"/>
         </group>
-        <field name="state" readonly="1" string="Estado"/>
+
+        <group string="Información Adicional">
+          <field name="last_working_day" string="Último día laborado"/>
+          <field name="notice_given" string="Aviso previo otorgado"/>
+          <field name="notice_period_days" string="Días de aviso previo"/>
+          <field name="rehire_eligible" string="Elegible para recontratación"/>
+          <field name="exit_interview_done" string="Entrevista de salida realizada"/>
+          <field name="exit_document_signed" string="Documento de salida firmado"/>
+          <field name="settlement_date" string="Fecha de liquidación"/>
+        </group>
+
+        <field name="state" string="Estado"/>
       </form>
     </field>
   </record>
@@ -30,7 +46,7 @@
         <field name="employee_id" string="Empleado"/>
         <field name="exit_date" string="Fecha de salida"/>
         <field name="reason" string="Motivo"/>
-        <field name="final_payment" string="Pago final"/>
+        <field name="total_settlement" string="Total de liquidación"/>
         <field name="state" string="Estado"/>
       </list>
     </field>
@@ -47,6 +63,8 @@
   <menuitem id="menu_employee_settlement" name="Liquidaciones Empleados"
             parent="menu_employee_settlement_root" action="action_employee_settlement" sequence="1"/>
 </odoo>
+
+
 
 
 
