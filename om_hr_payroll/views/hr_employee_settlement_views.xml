@@ -10,7 +10,6 @@
           <field name="reason" string="Motivo"/>
           <field name="notes" string="Notas"/>
         </group>
-
         <group string="Liquidación">
           <field name="pending_vacation_days" string="Días pendientes de vacaciones"/>
           <field name="severance_pay" string="Pago de indemnización"/>
@@ -63,9 +62,6 @@
   <menuitem id="menu_employee_settlement" name="Liquidaciones Empleados"
             parent="menu_employee_settlement_root" action="action_employee_settlement" sequence="1"/>
 </odoo>
-
-
-
 
 
 

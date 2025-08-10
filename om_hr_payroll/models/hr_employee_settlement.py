@@ -1,6 +1,5 @@
 from odoo import models, fields, api
 
-
 class EmployeeSettlement(models.Model):
     _name = 'hr.employee.settlement'
     _description = 'Liquidación de Empleado'
@@ -49,6 +48,5 @@ class EmployeeSettlement(models.Model):
                 + (record.other_compensations or 0.0)
                 - (record.deductions or 0.0)
             )
-
 
 
