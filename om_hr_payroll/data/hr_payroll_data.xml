@@ -9,8 +9,8 @@
             <field name="code">BASIC</field>
             <field name="category_id" ref="om_hr_payroll.BASIC"/>
             <field name="condition_select">none</field>
-            <field name="amount_select">fix</field>
-            <field name="amount_fix">0.0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage</field>
         </record>
 
         <record id="hr_rule_taxable" model="hr.salary.rule">
@@ -19,8 +19,8 @@
             <field name="code">GROSS</field>
             <field name="category_id" ref="om_hr_payroll.GROSS"/>
             <field name="condition_select">none</field>
-            <field name="amount_select">fix</field>
-            <field name="amount_fix">0.0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.BASIC + categories.ALW</field>
         </record>
 
         <record id="hr_rule_hra" model="hr.salary.rule">
@@ -29,7 +29,8 @@
             <field name="code">HRA</field>
             <field name="category_id" ref="om_hr_payroll.ALW"/>
             <field name="condition_select">none</field>
-            <field name="amount_select">percentage</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.hra</field>
             <field name="amount_percentage">30</field>
         </record>
 
@@ -39,8 +40,8 @@
             <field name="code">DA</field>
             <field name="category_id" ref="om_hr_payroll.ALW"/>
             <field name="condition_select">none</field>
-            <field name="amount_select">fix</field>
-            <field name="amount_fix">0.0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.da</field>
         </record>
 
         <record id="hr_rule_travel" model="hr.salary.rule">
@@ -49,8 +50,8 @@
             <field name="code">Travel</field>
             <field name="category_id" ref="om_hr_payroll.ALW"/>
             <field name="condition_select">none</field>
-            <field name="amount_select">fix</field>
-            <field name="amount_fix">0.0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.travel_allowance</field>
         </record>
 
         <record id="hr_rule_meal" model="hr.salary.rule">
@@ -59,8 +60,8 @@
             <field name="code">Meal</field>
             <field name="category_id" ref="om_hr_payroll.ALW"/>
             <field name="condition_select">none</field>
-            <field name="amount_select">fix</field>
-            <field name="amount_fix">0.0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.meal_allowance</field>
         </record>
 
         <record id="hr_rule_medical" model="hr.salary.rule">
@@ -69,8 +70,8 @@
             <field name="code">Medical</field>
             <field name="category_id" ref="om_hr_payroll.ALW"/>
             <field name="condition_select">none</field>
-            <field name="amount_select">fix</field>
-            <field name="amount_fix">0.0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.medical_allowance</field>
         </record>
 
         <record id="hr_rule_net" model="hr.salary.rule">
@@ -79,8 +80,8 @@
             <field name="code">NET</field>
             <field name="category_id" ref="om_hr_payroll.NET"/>
             <field name="condition_select">none</field>
-            <field name="amount_select">fix</field>
-            <field name="amount_fix">0.0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.BASIC + categories.ALW + categories.DED</field>
             <field name="register_id" ref="contrib_register_employees"/>
         </record>
 
