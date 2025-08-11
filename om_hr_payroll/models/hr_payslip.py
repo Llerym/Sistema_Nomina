@@ -375,7 +375,7 @@ class HrPayslip(models.Model):
                         'sequence': rule.sequence,
                         'appears_on_payslip': rule.appears_on_payslip,
                         'condition_select': rule.condition_select,
-                        'condition_python': rule.condition_python,
+
                         'condition_range': rule.condition_range,
                         'condition_range_min': rule.condition_range_min,
                         'condition_range_max': rule.condition_range_max,
