@@ -381,7 +381,7 @@ class HrPayslip(models.Model):
                         'condition_range_max': rule.condition_range_max,
                         'amount_select': rule.amount_select,
                         'amount_fix': rule.amount_fix,
-                        'amount_python_compute': rule.amount_python_compute,
+                        #'amount_python_compute': rule.amount_python_compute,
                         'amount_percentage': rule.amount_percentage,
                         'amount_percentage_base': rule.amount_percentage_base,
                         'register_id': rule.register_id.id,
