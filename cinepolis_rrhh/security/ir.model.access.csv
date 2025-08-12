@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_cinepolis_rrhh_cinepolis_rrhh,cinepolis_rrhh.cinepolis_rrhh,model_cinepolis_rrhh_cinepolis_rrhh,base.group_user,1,1,1,1
+access_hr_employee_settlement_all,access_hr_employee_settlement_all,model_hr_employee_settlement,,1,1,1,1

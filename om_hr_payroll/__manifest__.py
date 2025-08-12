@@ -35,7 +35,6 @@
         'views/hr_contract_history_views.xml',
         'views/hr_leave_type_view.xml',
         'data/mail_template.xml',
-        'views/hr_employee_settlement_views.xml',
     ],
     'images': ['static/description/banner.png'],
     'application': True,

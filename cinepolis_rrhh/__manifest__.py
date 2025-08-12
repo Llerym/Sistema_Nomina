@@ -18,14 +18,17 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['hr', 'base'],
+    'depends': ['hr', 'base',
+    'om_hr_payroll'
+    ],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
         'views/hr_employee_form.xml',
+        'views/hr_employee_settlement_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

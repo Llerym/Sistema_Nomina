@@ -48,5 +48,3 @@ class EmployeeSettlement(models.Model):
                 + (record.other_compensations or 0.0)
                 - (record.deductions or 0.0)
             )
-
-
