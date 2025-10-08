@@ -18,7 +18,7 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['hr', 'base',
+    'depends': ['base','web', 'hr',
     'om_hr_payroll'
     ],
 
@@ -27,9 +27,16 @@ Long description of module's purpose
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/hr_employee_form.xml',
         'views/hr_employee_settlement_views.xml',
     ],
+
+'assets': {
+    'web.assets_backend': [
+        # aquí la ruta exacta a tu CSS
+        'cinepolis_rrhh/static/src/css/employee_form.css',
+    ],
+},
+
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',

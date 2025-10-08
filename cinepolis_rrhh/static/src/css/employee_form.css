@@ -1,0 +1,90 @@
+/* File: cinepolis_rrhh/static/src/css/employee_form.css */
+
+/* -------------------------------------------------- */
+/* 0) Eliminar cualquier border del contenedor de     */
+/*    dropdown/many2one para evitar doble subrayado   */
+/* -------------------------------------------------- */
+.o_form_sheet .o_field_widget .o_input_dropdown,
+.o_form_sheet .o_field_widget .o_field_many2one .o_input {
+    border: none !important;
+}
+
+/* -------------------------------------------------- */
+/* 1) Input de texto, email, teléfono, número, URL…   */
+/* -------------------------------------------------- */
+.o_form_sheet .o_field_widget input.form-control,
+.o_form_sheet .o_field_widget input[type="text"],
+.o_form_sheet .o_field_widget input[type="email"],
+.o_form_sheet .o_field_widget input[type="tel"],
+.o_form_sheet .o_field_widget input[type="number"],
+.o_form_sheet .o_field_widget input[type="url"],
+.o_form_sheet .o_field_widget input[type="password"] {
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    padding: 0.25rem 0 !important;
+}
+
+/* -------------------------------------------------- */
+/* 2) Áreas de texto (textarea)                       */
+/* -------------------------------------------------- */
+.o_form_sheet .o_field_widget textarea.form-control,
+.o_form_sheet .o_field_widget textarea {
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    padding: 0.25rem 0 !important;
+    resize: vertical;
+}
+
+/* -------------------------------------------------- */
+/* 3) Selects y dropdowns (many2one, categorías…)     */
+/* -------------------------------------------------- */
+.o_form_sheet .o_field_widget select.form-control {
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    padding: 0.25rem 0 !important;
+}
+
+/* -------------------------------------------------- */
+/* 4) Focus: cambia el color de la línea inferior     */
+/* -------------------------------------------------- */
+.o_form_sheet .o_field_widget input.form-control:focus,
+.o_form_sheet .o_field_widget textarea.form-control:focus,
+.o_form_sheet .o_field_widget select.form-control:focus {
+    outline: none !important;
+    border-bottom-color: #007bff !important;
+    box-shadow: none !important;
+}
+
+/* -------------------------------------------------- */
+/* 5) Ajustes extra para widgets especiales           */
+/*    (tags, avatar-many2one, badges…)                */
+/* -------------------------------------------------- */
+/* Many2many_tags */
+.o_form_sheet .o_field_widget .o_field_many2manytags .badge {
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+}
+/* Boolean checkbox inline (quita el fondo resaltado) */
+.o_form_sheet .o_field_widget .o_field_boolean .form-check-input {
+    box-shadow: none !important;
+}
+
+/* -------------------------------------------------- */
+/* 6) (Opcional) Para restringir sólo a hr.employee   */
+/* -------------------------------------------------- */
+/*
+.form.hr_employee_form .o_form_sheet .o_field_widget input.form-control,
+.form.hr_employee_form .o_form_sheet .o_field_widget textarea.form-control,
+.form.hr_employee_form .o_form_sheet .o_field_widget select.form-control {
+    ... mismas reglas ...
+}
+*/
